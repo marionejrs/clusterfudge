@@ -27,10 +27,9 @@ export default class ClusterNode<T = number> {
     }
 
      getRandomColor() {
-        let letters = '0123456789ABCDEF';
         let color = '#';
         for (let i = 0; i < 6; i++) {
-          color += letters[Math.floor(Math.random() * 16)];
+          color += Math.floor(Math.random() * 16).toString(16);
         }
         return color;
      }
