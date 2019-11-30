@@ -1,0 +1,23 @@
+.AppSettings {
+    width: 100%;
+    height: 100%;
+}
+
+.AppSettingsInput {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.AppSettingsLabel {
+    flex: 1 0 50%;
+}
+
+.AppSettingsValue {
+    flex: 1 0 50%;
+
+    input {
+        width : 50px;
+    }
+}

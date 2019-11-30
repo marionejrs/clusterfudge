@@ -6,21 +6,15 @@
   height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
+.AppSettingsContainer {
+  width : 30vw;
+  height: 100vh;
+  background-color: #333;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.AppGrid {
+  width: 70vw;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #09d3ac;
+  align-items: center;
 }

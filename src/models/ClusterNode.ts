@@ -1,19 +1,20 @@
 import ClusterNodeGroup from "./ClusterNodeGroup";
+import ClusterValue from "./ClusterValue";
 
 export default class ClusterNode<T = number> {
     x : number;
     y : number;
-    value : T;
     isVisited : boolean;
     nextNodes : ClusterNode<T>[];
     group : ClusterNodeGroup<T>;
+    value : ClusterValue<T>;
 
-    constructor(x : number, y : number, value : T) {
+    constructor(x : number, y : number, value : ClusterValue<T>) {
         this.x = x;
         this.y = y;
         this.isVisited = false;
-        this.value = value;
         this.nextNodes = [];
+        this.value = value
         this.group = {
             key : `(${x},${y})`,
             nodes : [this],
@@ -36,7 +37,7 @@ export default class ClusterNode<T = number> {
 
     traverseNext() {
         for(let next of this.nextNodes) {
-            if (!next.isVisited && next.value === this.value) {
+            if (!next.isVisited && this.value.equals(next.value)) {
                 this.group.nodes.push(next);
                 next.group = this.group;
                 next.isVisited = true;
@@ -44,5 +45,9 @@ export default class ClusterNode<T = number> {
             }
         }
         this.isVisited = true;
+    }
+
+    getValue() {
+        return this.value.getValue();
     }
 }
