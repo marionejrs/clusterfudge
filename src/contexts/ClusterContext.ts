@@ -10,7 +10,8 @@ export interface ClusterContext {
     numberOfRows : number,
     numberOfColumns : number,
     possibleValues : number,
-    setPossibleValues : (possibleValue : number) => void
+    setPossibleValues : (possibleValue : number) => void,
+    shuffle : () => void
 }
 
 const ClusterContext = React.createContext<ClusterContext>({
@@ -21,6 +22,7 @@ const ClusterContext = React.createContext<ClusterContext>({
     numberOfRows : 0,
     numberOfColumns : 0,
     possibleValues : 0,
-    setPossibleValues : (possibleValue : number) => {}
+    setPossibleValues : (possibleValue : number) => {},
+    shuffle : () => {}
 });
 export default ClusterContext;

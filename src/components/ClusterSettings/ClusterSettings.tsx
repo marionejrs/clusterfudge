@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 import styles from './ClusterSettings.module.scss';
 import ClusterContext from '../../contexts/ClusterContext';
 
@@ -50,6 +50,9 @@ const ClusterSettings : React.FC = () => {
                             clusterContext.setPossibleValues(Number.parseInt(event.target.value));
                         }}/>
                 </div>
+            </div>
+            <div className={styles.AppSettingsInput}>
+                <button onClick={() => { clusterContext.shuffle() }}>Shuffle</button>
             </div>
         </div>
     );

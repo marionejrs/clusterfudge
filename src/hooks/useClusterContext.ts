@@ -37,7 +37,7 @@ export default function useClusterContext() : ClusterContext {
         }
     }, [nodes]);
 
-    useEffect(() => {
+    let doShuffle = () => {
         // console.log("mount", rows, columns, possibleValues)
         let newNodes : ClusterNode[][] = [];
         for (let rowIndex = 0; rowIndex < numberOfRows; rowIndex++) {
@@ -81,6 +81,10 @@ export default function useClusterContext() : ClusterContext {
         setNodes(newNodes);
         // setNumberOfRows(rows);
         // setNumberOfColumns(columns);
+    }
+
+    useEffect(() => {
+        doShuffle();
     }, [numberOfRows, numberOfColumns, possibleValues]);
     console.log("size:", numberOfRows, numberOfColumns)
     return {
@@ -91,6 +95,7 @@ export default function useClusterContext() : ClusterContext {
         numberOfRows,
         numberOfColumns,
         possibleValues,
-        setPossibleValues: toggleSetPossibleValue
+        setPossibleValues: toggleSetPossibleValue,
+        shuffle : doShuffle
     }
 }
