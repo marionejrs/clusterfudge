@@ -35,7 +35,8 @@ const App: React.FC = () => {
           Number of Rows: {clusterContext.numberOfRows}<br/>
           Number of Columns: {clusterContext.numberOfColumns}<br/>
           Number of Groups: {clusterContext.groups.length}<br/>
-          Biggest Group: {biggestGroup && biggestGroup.key}
+          Biggest Group: {biggestGroup && biggestGroup.key}<br/>
+          Biggest Group Size: {biggestGroup && biggestGroup.nodes.length}
         </div>
       </ClusterContext.Provider>
     </div>

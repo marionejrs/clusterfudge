@@ -1,9 +1,15 @@
+@font-face {
+  font-family: 'Roboto';
+  src: url('./assets/fonts/Roboto-Regular.ttf');
+}
+
 .App {
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
+  font-family: 'Roboto', 'sans-serif';
 }
 
 .AppSettingsContainer {
@@ -27,7 +33,7 @@
   top: 0;
   right: 0;
   width: 15vw;
-  height: 10vh;
+  // height: 10vh;
   background-color: #333;
   color: #FFF;
   font-size: 0.714285714rem;

@@ -37,9 +37,9 @@ export default class ClusterNode<T = number> {
 
     traverseNext() {
         for(let next of this.nextNodes) {
-            if (!next.isVisited && this.value.equals(next.value)) {
-                this.group.nodes.push(next);
+            if (!next.isVisited && this.value.equals(next.value) && next.group !== this.group) {
                 next.group = this.group;
+                this.group.nodes.push(next);
                 next.isVisited = true;
                 next.traverseNext();
             }

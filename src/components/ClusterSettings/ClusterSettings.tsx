@@ -4,7 +4,6 @@ import ClusterContext from '../../contexts/ClusterContext';
 
 const ClusterSettings : React.FC = () => {
     let clusterContext = useContext(ClusterContext);
-    console.log("settings", clusterContext)
 
     return (
         <div className={styles.AppSettings}>
