@@ -3,7 +3,7 @@ import styles from './ClusterGrid.module.scss';
 import ClusterContext from '../../contexts/ClusterContext';
 
 const ClusterGrid : React.FC = () => {
-    let { nodes, traverse, numberOfRows, numberOfColumns } = useContext(ClusterContext);
+    let { nodes, traverse } = useContext(ClusterContext);
     traverse();
 
     return (

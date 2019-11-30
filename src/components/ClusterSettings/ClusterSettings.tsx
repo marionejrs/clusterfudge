@@ -1,12 +1,17 @@
 import React, { useContext } from 'react';
 import styles from './ClusterSettings.module.scss';
 import ClusterContext from '../../contexts/ClusterContext';
+import logo from '../../logo.png';
 
 const ClusterSettings : React.FC = () => {
     let clusterContext = useContext(ClusterContext);
 
     return (
         <div className={styles.AppSettings}>
+            <div className={styles.AppSettingsHeader}>
+                <h3>ClusterFudge</h3>
+                <img src={logo}></img>
+            </div>
             <div className={styles.AppSettingsInput}>
                 <div className={styles.AppSettingsLabel}>
                     <label htmlFor="rows">Rows</label>

@@ -3,6 +3,19 @@
     height: 100%;
 }
 
+.AppSettingsHeader {
+    color: #FFF;
+
+    h3 {
+        margin: 5px 0px;
+    }
+
+    img {
+        width : 75px;
+        height: 75px;
+    }
+}
+
 .AppSettingsInput {
     display: flex;
     justify-content: center;
